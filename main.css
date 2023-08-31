@@ -2,6 +2,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
+    height: fit-content;
     font-family: inter;
     margin: 0;
     background: url(b.png);
@@ -73,33 +74,52 @@ body{
 }
 
 .pricing{
+    scale: 0.7;
+    transform: translateY(-200px);
+    min-width: 540px;
+    padding:50px 75px;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
     width: 70%;
     height: auto;
     margin: auto;
     margin-top: 0;
     margin-bottom: 50px;
+    box-shadow: 0 0 70px rgba(0, 0, 0, 0.08);
+
 }
+.pricing:hover{
+    transition: ease-in-out .3s;
+    box-shadow: 0 0 70px rgba(0, 0, 0, 0.264);
+}
+
 .card{
+    flex: 1;
+    min-width: 250px;
+    margin: auto ;
     scale: 0.95;
     position: relative;
-    width: 40%;
-    height: 510px;
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 15px;
     border-radius: 4px;
     background:linear-gradient(to right bottom,#4e8fff,#e83ec4);
     cursor: pointer;
 }
 .card::before {
+    min-width: 250px;
     mix-blend-mode: screen;
     content: "";
     position: absolute;
-    top: -10px; /* Move the pseudo-element above the card */
-    left: -10px; /* Move the pseudo-element to the left of the card */
-    right: -10px; /* Make the pseudo-element stretch to the right */
-    bottom: -10px; /* Make the pseudo-element stretch to the bottom */
+    top: -10px; 
+    left: -10px; 
+    right: -10px; 
+    bottom: -10px;
     background: linear-gradient(to right bottom, #4e8fff, #e83ec4);
-    filter: blur(50px); /* Add a blur effect for the glowing effect */
-    opacity: 0.8; /* Adjust the opacity as needed */
-    z-index: -1; /* Place the pseudo-element behind the card */
+    filter: blur(50px);
+    opacity: 0.8; 
+    z-index: -1;
 }
 .card:hover{
     scale: 1;
@@ -124,13 +144,86 @@ body{
 }
 .text{
     margin: 4%;
-    margin-left: 6%;
+    margin-left: 10%;
 }
 .text h1{
-    font-family:jaldi;
+    margin: 0;
     color: azure;
 }
 .bottomcard{
     box-shadow:0 0 55px linear-gradient(to right bottom,#4e8fff,#e83ec4);
+}
+.container span img{
+    width: 20px;
+}
+.container span{
+    color: #3b5375a9;
+    font-weight: 800;
+}
+.container h1{
+    font-family: poppins;
+}
 
+.text li{
+    color: #e0eeff;
+    width: fit-content;
+    margin: 0;
+}
+.text ul{
+    padding:0 20px;
+}
+ul{
+    padding:0 20px;
+}
+.Deluxe div{
+    width: 95%;
+    overflow: hidden;
+}
+.Deluxe{
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+.Deluxe:hover .d-img{
+    transition: ease-in-out .5s;
+    box-shadow: 0 0 25px rgba(33, 28, 87, 0.549);
+}
+.Deluxe:hover img{
+    scale: 1.1;
+    transition: ease-in 0.5s;
+}
+.Deluxe img{
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.189);
+    border-radius: 4px;
+}
+.x{
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+}
+#book:hover{
+    letter-spacing: 5px;
+    transition: ease-in .3s;
+    text-align: center;
+}
+#book{
+    width: auto;
+    text-align: center;
+    margin: auto;
+    padding: 10px 36px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    background-color: #1E293B;
+    color: #E2E8F0;
+    margin: 15px 0px ;
+    font-family: jaldi;
+}
+.d-text{
+    width: auto;
 }
